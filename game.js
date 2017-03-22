@@ -76,8 +76,9 @@ p1.addEventListener("click",PlayerOne);
 	
 function PlayerOne() {
 	if(points1.innerHTML !== box.value){
-		if(points2.innerHTML !== box.value)
+		if(points2.innerHTML !== box.value){
 			points1.innerHTML++;
+		}
 	}
 			
 	
@@ -92,8 +93,9 @@ p2.addEventListener("click", PlayerTwo)
 
 function PlayerTwo() {
 	if(points2.innerHTML !== box.value){
-		if(points1.innerHTML !== box.value)
+		if(points1.innerHTML !== box.value){
 			points2.innerHTML++ ;
+		}
 		
 	}
 
