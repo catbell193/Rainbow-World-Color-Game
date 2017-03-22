@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+
+	<!-- links and metas set-->
+		
 		<title>Dom Game</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="game.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
+		
+		<!-- The points that will indicate current score of 
+		each player-->
+
 		<header>
 			<h1><span id="points1">num</span> to <span id="points2">num</span></h1>
 		</header>
+		
+		<!-- The score that is to be met -->
+
 		<h2>Play to <span id="max"> 5</span></h2>
-		<input type="number" id="box" name="box" value="5" >
+		
+		<input type="number" id="box" name="box" value="5" min="0" >
+		
+		<!-- Player One, Two , and Reset Buttons -->
+
 		<button id="p1">Player One</button>
 		<button id="p2">Player Two</button>
 		<button id="reset">Reset</button>
 
 
+		<!-- JavaScript source -->
 
 		<script async type="text/javascript" src="game.js"></script>
 		
