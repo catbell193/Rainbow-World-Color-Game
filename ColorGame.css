@@ -1,0 +1,313 @@
+header {
+	background-image: url("https://cdn.pixabay.com/photo/2015/05/26/09/31/background-784377_960_720.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	border-width: 6px;
+	border-style: solid;
+	border-color: pink;
+	height: 170px;
+	margin-top: 0px;
+	padding-top: 20px;
+	width: 100%;
+	margin-left: 0px;
+	padding-bottom: 20px;
+
+}
+
+h1 { 
+	text-align: center;
+	font-family: 'Tangerine', serif;
+	font-size:100px;
+	text-shadow: 3px 3px 3px #aaa;
+	margin-top: 0px;
+}
+
+body{
+	background-image: url("http://www.backgroundsy.com/file/large/light-colorful-background.jpg");
+	background-size: cover;
+	min-width: 100%;
+	max-width:100%;
+	background-repeat: no-repeat;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	width: 100%;
+
+}
+
+#r {
+	color: #cc0000 ;
+}
+#a {
+	color: #ff6633;
+}
+#i {
+	color: #ffff00;
+}
+#n {
+	color: #00cc00;
+}
+#b {
+	color: #00cccc;
+}
+#o {
+	color: #0066ff;
+}
+#w {
+	color: #0000ff;
+}
+
+.face{ 
+	margin-left: 60px;
+	min-width: 100%
+	max-width:100%;
+	width: 100%;
+	width: 200px;
+	height: 200px;
+	background-image: url('http://images.clipartpanda.com/beat-clipart-12018917-Beat-up-emoticon-seeing-stars-above-his-head-Stock-Vector-smiley-face-cartoon.jpg');
+	background-size: 100% 100%;
+}
+
+
+.menu {
+	background-image: url("http://cdn.wallpapersafari.com/90/87/hTxJ0c.jpg");
+	background-size: 100%
+	background-repeat: no-repeat;
+	background-color: white;
+	text-align: center;
+	height: 48px;
+	border-bottom-color: #ccc;
+	border-width: 5px;
+	border-style: solid;
+
+}
+
+.squares{
+	width: 30%;
+	padding-bottom: 30%;
+	float: left;
+	margin: 1.66%;
+	transition: background 0.5s;
+	-webkit-transition: background 0.5s;
+	-moz-transition: background 0.5s;
+}
+
+button {
+	background-image: url("https://68.media.tumblr.com/8c74dd3fdd2816b4308392af8a972881/tumblr_nyl5jrKtP21rzli00o1_500.jpg");
+	background-size: cover;
+	padding: 10px;
+	margin-right: 120px;
+	margin-top: 5px;
+	text-shadow: 2px 2px #ccc;
+	font-family: 'Love Ya Like A Sister', cursive;
+	font-weight: bolder;
+	background-color: white;
+	border-style: solid;
+	border-width: 3px;
+	border-color: pink;
+	-webkit-animation: zoom-in-out 2s linear 0s infinite normal ;
+ animation: zoom-in-out 2s linear 0s infinite normal ;
+}
+
+@-webkit-keyframes zoom-in-out {
+  0%{
+	-webkit-transform: scale(1);
+	transform: scale(2);
+  }
+  50%{
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+  }
+  100%{
+	-webkit-transform: scale(2);
+	transform: scale(2);
+  }
+}
+
+@keyframes zoom-in-out {
+  0%{
+	-ms-transform: scale(1);
+	transform: scale(1);
+  }
+  50%{
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+  }
+  100%{
+	-ms-transform: scale(1);
+	transform: scale(1);
+  }
+}
+
+
+#easy {
+	margin-left: 20px;
+}
+.circle {
+	max-width:100%;
+	width: 200px;
+	height: 200px;
+	background: white;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 50%;
+	margin-left: 70px;
+	
+}
+.circle:hover {
+	animation: spin 6s infinite linear;
+
+}
+
+@keyframes spin {
+	from {
+		transform: rotateY(0deg) rotate(0deg);
+	}
+	to {
+		transform: rotateY(360deg) rotate(-360deg);
+	}	
+
+}
+
+.square {
+	width: 200px;
+	height: 200px;
+	background: white;
+	margin-left: 50px;
+	
+
+}
+
+.square:hover {
+	animation: spin 3s infinite linear;
+
+}
+
+@keyframes spin {
+	from {
+		transform: rotateY(0deg) rotate(0deg);
+	}
+	to {
+		transform: rotateY(360deg) rotate(-90deg);
+	}
+}
+
+.oval {
+	width: 300px;
+	height: 150px;
+	background: white;
+	-moz-border-radius: 200px / 100px;
+	-webkit-border-radius: 200px / 100px;
+	border-radius: 200px / 100px;
+	margin-left: 30px;
+} 
+
+	
+
+
+.oval:hover {
+	animation: spin 3s infinite linear;
+
+}
+
+@keyframes spin {
+	from {
+		transform: rotateY(0deg) rotate(0deg);
+	}
+	to {
+		transform: rotateY(360deg) rotate(-360deg);
+	}	
+
+}
+
+.par {
+	margin-left: 60px;
+	width: 250px;
+	height: 175px;
+	-webkit-transform: skew(20deg);
+	   -moz-transform: skew(20deg);
+	     -o-transform: skew(20deg);
+	background: white;
+
+}
+.par:hover {
+	animation: spin 3s infinite linear;
+
+}
+
+@keyframes spin {
+	from {
+		transform: rotateY(0deg) rotate(0deg);
+	}
+	to {
+		transform: rotateY(360deg) rotate(360deg);
+	}	
+
+}
+
+.rectangle {
+	width:320px;
+	height: 200px;
+	background: white;
+	margin-top: 20px;
+	margin-left: 30px;
+	
+}
+.rectangle:hover {
+	animation: spin 3s infinite linear;
+
+}
+
+@keyframes spin {
+	from {
+		transform: rotateY(0deg) rotate(0deg);
+	}
+	to {
+		transform: rotateY(360deg) rotate(-360deg);
+	}	
+
+}
+.egg {
+	display:block;
+   margin-left: 60px;
+   width: 146px;
+   height: 220px;
+   background-color: white;
+   -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
+   border-radius:         50%  50%  50%  50%  / 60%   60%   40%  40%;
+   
+}
+	
+
+.egg:hover {
+	animation: spin 3s infinite linear;
+
+}
+
+@keyframes spin {
+	from {
+		transform: rotateY(0deg) rotate(0deg);
+	}
+	to {
+		transform: rotateY(360deg) rotate(-360deg);
+	}	
+
+}
+
+
+.container1{
+	text-align: center;
+	max-width: 100%
+
+}
+.container3{
+	height: 290px;
+	max-width: 100%
+	margin-top: 40px;
+}
+
+table {
+	margin-left: 160px;
+}
+
+
