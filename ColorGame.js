@@ -5,78 +5,129 @@ var colors = document.getElementById("colors");
 /*colors.addEventListener("click",Rainbow );*/
 
 var square = document.getElementById("square");
-square.addEventListener("click",function() {
-	if(numbers.innerHTML != shapes[1].style.backgroundColor){
-	 	$("#square").removeClass("square");
-		$("#square").addClass("face");
-	}
-	if(numbers.innerHTML != shapes1[0].style.backgroundColor){
-		$("#square").removeClass("square");
-		$("#square").addClass("face");
-		return;
-	}
-	if(numbers.innerHTML == shapes1[0].style.backgroundColor){
-		$("#square").removeClass("face");
-		$("#square").addClass("square");
-		$("#circle").removeClass("face");
-		$("#circle").addClass("circle");
-		$("#oval").removeClass("face");
-		$("#oval").addClass("oval")
-		oval.style.backgroundColor = shapes1[0].style.backgroundColor;
-		circle.style.backgroundColor = shapes1[0].style.backgroundColor;
-		square.style.backgroundColor = shapes1[0].style.backgroundColor;
-		par.style.backgroundColor = shapes1[0].style.backgroundColor;
-	 	rectangle.style.backgroundColor = shapes1[0].style.backgroundColor;
-	 	egg.style.backgroundColor = shapes1[0].style.backgroundColor;
-	 	numbers.style.color = shapes1[0].style.backgroundColor;
-
-		return;
-	}
 	
-	else{
-		$("#square").removeClass("face");
-		$("#square").addClass("square");
+var oval = document.getElementById("oval"); 
+	
+var egg = document.getElementById("egg");
+	
+
+var rectangle = document.getElementById("rectangle");
 
 
-		$("#egg").removeClass("face");
-		$("#egg").addClass("egg");
+var par = document.getElementById("par");
 
-		$("#rectangle").removeClass("face");
-		$("#rectangle").addClass("rectangle");
 
-		$("#par").removeClass("face");
-		$("#par").addClass("par");
+var journey= document.getElementById("journey");
+journey.addEventListener("click", function() {
 
-		$("#circle").removeClass("face");
-		$("#circle").addClass("circle");
+	oval.addEventListener("click", oval2);
+	square.addEventListener("click", square2);
+	egg.addEventListener("click", egg2); 
+	circle.addEventListener("click", circle2);
+	rectangle.addEventListener("click", rectangle2);
+	par.addEventListener("click", par2);	
+	
+	
+	var random = Math.floor(Math.random() *6 );
+	
+	var select = shapes[random];
+
+	$("#square").removeClass("face");
+	$("#square").addClass("square");
+
+
+	$("#egg").removeClass("face");
+	$("#egg").addClass("egg");
+
+	$("#rectangle").removeClass("face");
+	$("#rectangle").addClass("rectangle");
+
+	$("#par").removeClass("face");
+	$("#par").addClass("par");
+
+	$("#circle").removeClass("face");
+	$("#circle").addClass("circle");
+	
+	$("#oval").removeClass("face");
+	$("#oval").addClass("oval");
+
+	
+	
+	for (var i = 0; i < shapes.length; i++) {
+		var red = Math.floor(256*Math.random());
+		var green = Math.floor(256*Math.random());
+		var blue = Math.floor(256*Math.random());
+		var rgb ="rgb(" + red + "," + green + "," + blue +")";
+		shapes[i].style.backgroundColor = rgb;
 		
-		$("#oval").removeClass("face");
-		$("#oval").addClass("oval")
-	 	oval.style.backgroundColor = shapes[1].style.backgroundColor;
-	 	egg.style.backgroundColor = shapes[1].style.backgroundColor;
-	 	circle.style.backgroundColor = shapes[1].style.backgroundColor;
-	 	par.style.backgroundColor = shapes[1].style.backgroundColor;
-	 	rectangle.style.backgroundColor = shapes[1].style.backgroundColor;
-	 	numbers.style.color = shapes[1].style.backgroundColor;
-
-	}
 	
+	}
+	numbers.style.color = "black";
+	
+	numbers.innerHTML = select.style.backgroundColor;
+	
+	journey.textContent = "Start your journey";
+
+	difficult.textContent = "Difficult";
+
+	novice.textContent="Novice";
+	
+	console.log(select);
+
 	
 });
 
 
-var oval = document.getElementById("oval"); 
-oval.addEventListener("click", function() {
-	if(numbers.innerHTML != shapes[2].style.backgroundColor){
-		$("#oval").removeClass("oval");
-		$("#oval").addClass("face");
+
+var circle = document.getElementById("circle");
+
+
+var div = document.getElementsByTagName("div");
+
+var span = document.getElementsByTagName("span");
+
+var header = document.getElementsByTagName("header");
+
+var h1 = document.getElementsByTagName("h1");
+
+var table = document.getElementsByTagName("table");
+
+var thead =document.getElementsByTagName("thead");
+
+var th = document.getElementsByTagName("th");
+
+var tr =  document.getElementsByTagName("tr");
+
+var novice = document.getElementById("easy");
+
+function circle1() {
+	
+	
+	if(numbers.innerHTML != shapes1[2].style.backgroundColor){
+		$("#circle").removeClass("circle");
+		$("#circle").addClass("face");
 	}
+	else {
+		$("#square").removeClass("face");
+		$("#square").addClass("square");
+		$("#circle").removeClass("face");
+		$("#circle").addClass("circle");
+		$("#oval").removeClass("face");
+		$("#oval").addClass("oval");
+		square.style.backgroundColor = shapes1[2].style.backgroundColor;
+		oval.style.backgroundColor = shapes1[2].style.backgroundColor;
+		circle.style.backgroundColor = shapes1[2].style.backgroundColor;
+		numbers.style.color = shapes1[2].style.backgroundColor;
+
+	}
+}
+	
+function oval1(){
 	if(numbers.innerHTML != shapes1[1].style.backgroundColor){
 		$("#oval").removeClass("oval");
 		$("#oval").addClass("face");
-		return;
-	}	
-	if(numbers.innerHTML == shapes1[1].style.backgroundColor){
+	}
+	else{
 		$("#square").removeClass("face");
 		$("#square").addClass("square");
 		$("#circle").removeClass("face");
@@ -86,17 +137,38 @@ oval.addEventListener("click", function() {
 		oval.style.backgroundColor = shapes1[1].style.backgroundColor;
 		circle.style.backgroundColor = shapes1[1].style.backgroundColor;
 		square.style.backgroundColor = shapes1[1].style.backgroundColor;
-		par.style.backgroundColor = shapes1[1].style.backgroundColor;
-	 	rectangle.style.backgroundColor = shapes1[1].style.backgroundColor;
-	 	egg.style.backgroundColor = shapes1[1].style.backgroundColor;
 	 	numbers.style.color = shapes1[1].style.backgroundColor;
-
-		return;
+	}
+}
+function square1() {
+	
+	if(numbers.innerHTML != shapes1[0].style.backgroundColor){
+		$("#square").removeClass("square");
+		$("#square").addClass("face");
 	}
 	else{
+		$("#square").removeClass("face");
+		$("#square").addClass("square");
+		$("#circle").removeClass("face");
+		$("#circle").addClass("circle");
 		$("#oval").removeClass("face");
-		$("#oval").addClass("oval");
+		$("#oval").addClass("oval")
+		oval.style.backgroundColor = shapes1[0].style.backgroundColor;
+		circle.style.backgroundColor = shapes1[0].style.backgroundColor;
+		square.style.backgroundColor = shapes1[0].style.backgroundColor;
+	 	numbers.style.color = shapes1[0].style.backgroundColor;
 
+	}
+}
+	
+
+
+function circle2() {
+ 	if(numbers.innerHTML != shapes[0].style.backgroundColor){
+		$("#circle").removeClass("circle");
+		$("#circle").addClass("face");
+	}
+	else{
 		$("#square").removeClass("face");
 		$("#square").addClass("square");
 
@@ -113,22 +185,91 @@ oval.addEventListener("click", function() {
 		$("#circle").removeClass("face");
 		$("#circle").addClass("circle");
 		
-		square.style.backgroundColor = shapes[2].style.backgroundColor;
-	 	egg.style.backgroundColor = shapes[2].style.backgroundColor;
-	 	circle.style.backgroundColor = shapes[2].style.backgroundColor;
-	 	par.style.backgroundColor = shapes[2].style.backgroundColor;
-	 	rectangle.style.backgroundColor = shapes[2].style.backgroundColor;
-	 	oval.style.backgroundColor = shapes[2].style.backgroundColor;
-	 	numbers.style.color = shapes[2].style.backgroundColor;
-
+		$("#oval").removeClass("face");
+		$("#oval").addClass("oval")
+		oval.style.backgroundColor = shapes[0].style.backgroundColor;
+	 	egg.style.backgroundColor = shapes[0].style.backgroundColor;
+	 	square.style.backgroundColor = shapes[0].style.backgroundColor;
+	 	par.style.backgroundColor = shapes[0].style.backgroundColor;
+	 	rectangle.style.backgroundColor = shapes[0].style.backgroundColor;
+	 	numbers.style.color = shapes[0].style.backgroundColor;
 	}
-	
-	
-});
+};
+
+function par2() {
+	if(numbers.innerHTML != shapes[4].style.backgroundColor){
+	 	$("#par").removeClass("par");
+	 	$("#par").addClass("face");
+	}
+	else{
+		numbers.style.color = shapes[4].style.backgroundColor;
+		oval.style.backgroundColor = shapes[4].style.backgroundColor;
+	 	egg.style.backgroundColor = shapes[4].style.backgroundColor;
+	 	circle.style.backgroundColor = shapes[4].style.backgroundColor;
+	 	square.style.backgroundColor = shapes[4].style.backgroundColor;
+	 	rectangle.style.backgroundColor = shapes[4].style.backgroundColor;
+		$("#square").removeClass("face");
+		$("#square").addClass("square");
 
 
-var egg = document.getElementById("egg");
-egg.addEventListener("click",function () {
+		$("#egg").removeClass("face");
+		$("#egg").addClass("egg");
+
+		$("#rectangle").removeClass("face");
+		$("#rectangle").addClass("rectangle");
+
+		$("#par").removeClass("face");
+		$("#par").addClass("par");
+
+		$("#circle").removeClass("face");
+		$("#circle").addClass("circle");
+		
+		$("#oval").removeClass("face");
+		$("#oval").addClass("oval")
+		numbers.style.color = shapes[4].style.backgroundColor;
+		oval.style.backgroundColor = shapes[4].style.backgroundColor;
+	 	egg.style.backgroundColor = shapes[4].style.backgroundColor;
+	 	circle.style.backgroundColor = shapes[4].style.backgroundColor;
+	 	square.style.backgroundColor = shapes[4].style.backgroundColor;
+	 	rectangle.style.backgroundColor = shapes[4].style.backgroundColor;
+	}
+};
+
+
+function rectangle2() {
+
+	if(numbers.innerHTML != shapes[3].style.backgroundColor){
+	 	$("#rectangle").removeClass("rectangle");
+		$("#rectangle").addClass("face");
+	}
+	else{
+		oval.style.backgroundColor = shapes[3].style.backgroundColor;
+	 	egg.style.backgroundColor = shapes[3].style.backgroundColor;
+	 	circle.style.backgroundColor = shapes[3].style.backgroundColor;
+	 	par.style.backgroundColor = shapes[3].style.backgroundColor;
+	 	square.style.backgroundColor = shapes[3].style.backgroundColor;
+	 	numbers.style.color = shapes[3].style.backgroundColor;
+		$("#square").removeClass("face");
+		$("#square").addClass("square");
+
+
+		$("#egg").removeClass("face");
+		$("#egg").addClass("egg");
+
+		$("#rectangle").removeClass("face");
+		$("#rectangle").addClass("rectangle");
+
+		$("#par").removeClass("face");
+		$("#par").addClass("par");
+
+		$("#circle").removeClass("face");
+		$("#circle").addClass("circle");
+		
+		$("#oval").removeClass("face");
+		$("#oval").addClass("oval")
+	 }
+};
+function egg2() {
 	if(numbers.innerHTML != shapes[5].style.backgroundColor){
 	 	$("#egg").removeClass("egg");
 		$("#egg").addClass("face");
@@ -160,16 +301,46 @@ egg.addEventListener("click",function () {
 		$("#oval").removeClass("face");
 		$("#oval").addClass("oval")
 	}
+};
 
-	
-});
+function oval2() {
+	if(numbers.innerHTML != shapes[2].style.backgroundColor){
+		$("#oval").removeClass("oval");
+		$("#oval").addClass("face");
+	}
+	else{
+		$("#oval").removeClass("face");
+		$("#oval").addClass("oval");
 
-var rectangle = document.getElementById("rectangle");
-rectangle.addEventListener("click", function () {
+		$("#square").removeClass("face");
+		$("#square").addClass("square");
 
-	if(numbers.innerHTML != shapes[3].style.backgroundColor){
-	 	$("#rectangle").removeClass("rectangle");
-		$("#rectangle").addClass("face");
+
+		$("#egg").removeClass("face");
+		$("#egg").addClass("egg");
+
+		$("#rectangle").removeClass("face");
+		$("#rectangle").addClass("rectangle");
+
+		$("#par").removeClass("face");
+		$("#par").addClass("par");
+
+		$("#circle").removeClass("face");
+		$("#circle").addClass("circle");
+		
+		square.style.backgroundColor = shapes[2].style.backgroundColor;
+	 	egg.style.backgroundColor = shapes[2].style.backgroundColor;
+	 	circle.style.backgroundColor = shapes[2].style.backgroundColor;
+	 	par.style.backgroundColor = shapes[2].style.backgroundColor;
+	 	rectangle.style.backgroundColor = shapes[2].style.backgroundColor;
+	 	oval.style.backgroundColor = shapes[2].style.backgroundColor;
+	 	numbers.style.color = shapes[2].style.backgroundColor;
+	}
+};
+function square2() {
+	if(numbers.innerHTML != shapes[1].style.backgroundColor){
+	 	$("#square").removeClass("square");
+		$("#square").addClass("face");
 	}
 	else{
 		$("#square").removeClass("face");
@@ -190,141 +361,49 @@ rectangle.addEventListener("click", function () {
 		
 		$("#oval").removeClass("face");
 		$("#oval").addClass("oval")
-	 	oval.style.backgroundColor = shapes[3].style.backgroundColor;
-	 	egg.style.backgroundColor = shapes[3].style.backgroundColor;
-	 	circle.style.backgroundColor = shapes[3].style.backgroundColor;
-	 	par.style.backgroundColor = shapes[3].style.backgroundColor;
-	 	square.style.backgroundColor = shapes[3].style.backgroundColor;
-	 	numbers.style.color = shapes[3].style.backgroundColor;
-	 	
+	 	oval.style.backgroundColor = shapes[1].style.backgroundColor;
+	 	egg.style.backgroundColor = shapes[1].style.backgroundColor;
+	 	circle.style.backgroundColor = shapes[1].style.backgroundColor;
+	 	par.style.backgroundColor = shapes[1].style.backgroundColor;
+	 	rectangle.style.backgroundColor = shapes[1].style.backgroundColor;
+	 	numbers.style.color = shapes[1].style.backgroundColor;
 	}
-	return;
-	
-});
-
-var par = document.getElementById("par");
-par.addEventListener("click", function () {
-	if(numbers.innerHTML != shapes[4].style.backgroundColor){
-	 	$("#par").removeClass("par");
-	 	$("#par").addClass("face");
-	}
-	else{
-		$("#square").removeClass("face");
-		$("#square").addClass("square");
+};
 
 
-		$("#egg").removeClass("face");
-		$("#egg").addClass("egg");
-
-		$("#rectangle").removeClass("face");
-		$("#rectangle").addClass("rectangle");
-
-		$("#par").removeClass("face");
-		$("#par").addClass("par");
-
-		$("#circle").removeClass("face");
-		$("#circle").addClass("circle");
-		
-		$("#oval").removeClass("face");
-		$("#oval").addClass("oval")
-		numbers.style.color = shapes[4].style.backgroundColor;
-		oval.style.backgroundColor = shapes[4].style.backgroundColor;
-	 	egg.style.backgroundColor = shapes[4].style.backgroundColor;
-	 	circle.style.backgroundColor = shapes[4].style.backgroundColor;
-	 	square.style.backgroundColor = shapes[4].style.backgroundColor;
-	 	rectangle.style.backgroundColor = shapes[4].style.backgroundColor;
-	}
-	return;
-});
-
-var journey= document.getElementById("journey");
-journey.addEventListener("click", Start);
-
-var circle = document.getElementById("circle");
-circle.addEventListener("click", function () {
-	if(numbers.innerHTML != shapes[0].style.backgroundColor){
-		$("#circle").removeClass("circle");
-		$("#circle").addClass("face");
-	}
-	if(numbers.innerHTML != shapes1[2].style.backgroundColor){
-		$("#circle").removeClass("circle");
-		$("#circle").addClass("face");
-		return;
-
-	}
-	if(numbers.innerHTML == shapes1[2].style.backgroundColor){
-		$("#square").removeClass("face");
-		$("#square").addClass("square");
-		$("#circle").removeClass("face");
-		$("#circle").addClass("circle");
-		$("#oval").removeClass("face");
-		$("#oval").addClass("oval")
-		oval.style.backgroundColor = shapes1[2].style.backgroundColor;
-		circle.style.backgroundColor = shapes1[2].style.backgroundColor;
-		square.style.backgroundColor = shapes1[2].style.backgroundColor;
-		par.style.backgroundColor = shapes1[2].style.backgroundColor;
-	 	rectangle.style.backgroundColor = shapes1[2].style.backgroundColor;
-	 	egg.style.backgroundColor = shapes1[2].style.backgroundColor;
-	 	numbers.style.color = shapes1[2].style.backgroundColor;
-
-		return;
-	}
-	else{
-		$("#square").removeClass("face");
-		$("#square").addClass("square");
-
-
-		$("#egg").removeClass("face");
-		$("#egg").addClass("egg");
-
-		$("#rectangle").removeClass("face");
-		$("#rectangle").addClass("rectangle");
-
-		$("#par").removeClass("face");
-		$("#par").addClass("par");
-
-		$("#circle").removeClass("face");
-		$("#circle").addClass("circle");
-		
-		$("#oval").removeClass("face");
-		$("#oval").addClass("oval")
-		numbers.style.color = shapes[0].style.backgroundColor;
-		oval.style.backgroundColor = shapes[0].style.backgroundColor;
-	 	egg.style.backgroundColor = shapes[0].style.backgroundColor;
-	 	square.style.backgroundColor = shapes[0].style.backgroundColor;
-	 	par.style.backgroundColor = shapes[0].style.backgroundColor;
-	 	rectangle.style.backgroundColor = shapes[0].style.backgroundColor;
-		
-	}
-	
-});
-
-var div = document.getElementsByTagName("div");
-
-var span = document.getElementsByTagName("span");
-
-var header = document.getElementsByTagName("header");
-
-var h1 = document.getElementsByTagName("h1");
-
-var table = document.getElementsByTagName("table");
-
-var thead =document.getElementsByTagName("thead");
-
-var th = document.getElementsByTagName("th");
-
-var tr =  document.getElementsByTagName("tr");
-
-var novice = document.getElementById("easy");
 
 novice.addEventListener("click", function() {
+	$("#square").removeClass("face");
+	$("#square").addClass("square");
+
+	$("#circle").removeClass("face");
+	$("#circle").addClass("circle");
 	
+	$("#oval").removeClass("face");
+	$("#oval").addClass("oval");
+
+
 	$("#egg").removeClass("egg");
+	$("#egg").removeClass("face");
+
 
 	$("#rectangle").removeClass("rectangle");
-	
+	$("#rectangle").removeClass("face");
 
+	$("#par").removeClass("face");
 	$("#par").removeClass("par");
+
+	oval.removeEventListener("click", oval2);
+	square.removeEventListener("click", square2);
+	egg.removeEventListener("click", egg2); 
+	circle.removeEventListener("click", circle2);
+	rectangle.removeEventListener("click", rectangle2);
+	par.removeEventListener("click", par2);
+
+	circle.addEventListener("click", circle1);
+	square.addEventListener("click", square1);
+	oval.addEventListener("click", oval1);	
+	
 
 	var random = Math.floor(Math.random() *3 );
 	
@@ -337,7 +416,6 @@ novice.addEventListener("click", function() {
 		shapes1[i].style.backgroundColor = rgb;
 		
 	}
-
 	numbers.style.color = "black";
 	
 	numbers.innerHTML = select1.style.backgroundColor;
@@ -349,28 +427,52 @@ novice.addEventListener("click", function() {
 	difficult.textContent = "Difficult";
 	
 	console.log(select1);
-	
-} );
 
+	
+});
+	
 var difficult = document.getElementById("hard");
 difficult.addEventListener("click",function() {
+
+	oval.addEventListener("click", oval2);
+	square.addEventListener("click", square2);
+	egg.addEventListener("click", egg2); 
+	circle.addEventListener("click", circle2);
+	rectangle.addEventListener("click", rectangle2);
+	par.addEventListener("click", par2);
+
+	$("#square").removeClass("face");
+	$("#square").addClass("square");
+
+
+	$("#egg").removeClass("face");
 	$("#egg").addClass("egg");
 
+	$("#rectangle").removeClass("face");
 	$("#rectangle").addClass("rectangle");
 
+	$("#par").removeClass("face");
 	$("#par").addClass("par");
+
+	$("#circle").removeClass("face");
+	$("#circle").addClass("circle");
+	
+	$("#oval").removeClass("face");
+	$("#oval").addClass("oval");
+
 	
 	var random = Math.floor(Math.random() *6 );
 	
 	var select = shapes[random];
+
 	for (var i = 0; i < shapes.length; i++) {
 		var red = Math.floor(256*Math.random());
 		var green = Math.floor(256*Math.random());
 		var blue = Math.floor(256*Math.random());
 		var rgb ="rgb(" + red + "," + green + "," + blue +")";
 		shapes[i].style.backgroundColor = rgb;
-		
 	}
+
 	numbers.style.color = "black";
 	
 	numbers.innerHTML = select.style.backgroundColor;
@@ -397,65 +499,4 @@ var blue = Math.floor(256*Math.random());
 
 var rgb = "rgb(" + red + "," + green + "," + blue +")";
 	
-
-function Start() {
-	
-	var random = Math.floor(Math.random() *6 );
-	
-	var select = shapes[random];
-	$("#square").removeClass("face");
-	$("#square").addClass("square");
-
-
-	$("#egg").removeClass("face");
-	$("#egg").addClass("egg");
-
-	$("#rectangle").removeClass("face");
-	$("#rectangle").addClass("rectangle");
-
-	$("#par").removeClass("face");
-	$("#par").addClass("par");
-
-	$("#circle").removeClass("face");
-	$("#circle").addClass("circle");
-	
-	$("#oval").removeClass("face");
-	$("#oval").addClass("oval");
-	
-	for (var i = 0; i < shapes.length; i++) {
-		var red = Math.floor(256*Math.random());
-		var green = Math.floor(256*Math.random());
-		var blue = Math.floor(256*Math.random());
-		var rgb ="rgb(" + red + "," + green + "," + blue +")";
-		shapes[i].style.backgroundColor = rgb;
-		
-	}
-	numbers.style.color = "black";
-	
-	numbers.innerHTML = select.style.backgroundColor;
-	
-	journey.textContent = "Start your journey";
-
-	difficult.textContet = "Difficult";
-
-	novice.textContent="Novice";
-	
-	console.log(select);
-}
-
-	 
-
-
-
-
-  
-
- 
-
-
-
-	
-
-
-
 

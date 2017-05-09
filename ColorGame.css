@@ -1,3 +1,4 @@
+
 header {
 	background-image: url("https://cdn.pixabay.com/photo/2015/05/26/09/31/background-784377_960_720.jpg");
 	background-size: 100% 100%;
@@ -57,6 +58,10 @@ body{
 	color: #0000ff;
 }
 
+.win{
+	background-image: url('http://clipground.com/images/correct-clipart-19.jpg');
+}
+
 .face{ 
 	margin-left: 60px;
 	min-width: 100%
@@ -64,7 +69,7 @@ body{
 	width: 100%;
 	width: 200px;
 	height: 200px;
-	background-image: url('http://images.clipartpanda.com/beat-clipart-12018917-Beat-up-emoticon-seeing-stars-above-his-head-Stock-Vector-smiley-face-cartoon.jpg');
+	background-image: url('https://img.clipartfest.com/059d5c512eb86ea4bdbf3d3ee2c1f3bd_idolatry-is-wrong-clipart-wrong-clipart-gif_1500-1500.png');
 	background-size: 100% 100%;
 }
 
