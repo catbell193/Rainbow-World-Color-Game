@@ -25,7 +25,8 @@ journey.addEventListener("click", function() {
 	egg.addEventListener("click", egg2); 
 	circle.addEventListener("click", circle2);
 	rectangle.addEventListener("click", rectangle2);
-	par.addEventListener("click", par2);	
+	par.addEventListener("click", par2);
+	$("body").css("background-image","url('http://www.backgroundsy.com/file/large/light-colorful-background.jpg')");	
 	
 	
 	var random = Math.floor(Math.random() *6 );
@@ -118,6 +119,7 @@ function circle1() {
 		oval.style.backgroundColor = shapes1[2].style.backgroundColor;
 		circle.style.backgroundColor = shapes1[2].style.backgroundColor;
 		numbers.style.color = shapes1[2].style.backgroundColor;
+		$("body").css("background-image","url('http://33.media.tumblr.com/3e4ccc13280095f28acf4ef91cda36fa/tumblr_n7l8pdSEtp1slt6qeo2_500.gif')");
 
 	}
 }
@@ -138,6 +140,8 @@ function oval1(){
 		circle.style.backgroundColor = shapes1[1].style.backgroundColor;
 		square.style.backgroundColor = shapes1[1].style.backgroundColor;
 	 	numbers.style.color = shapes1[1].style.backgroundColor;
+	 	$("body").css("background-image","url('http://33.media.tumblr.com/3e4ccc13280095f28acf4ef91cda36fa/tumblr_n7l8pdSEtp1slt6qeo2_500.gif')");
+
 	}
 }
 function square1() {
@@ -157,6 +161,8 @@ function square1() {
 		circle.style.backgroundColor = shapes1[0].style.backgroundColor;
 		square.style.backgroundColor = shapes1[0].style.backgroundColor;
 	 	numbers.style.color = shapes1[0].style.backgroundColor;
+	 	$("body").css("background-image","url('http://33.media.tumblr.com/3e4ccc13280095f28acf4ef91cda36fa/tumblr_n7l8pdSEtp1slt6qeo2_500.gif')");
+
 
 	}
 }
@@ -193,6 +199,8 @@ function circle2() {
 	 	par.style.backgroundColor = shapes[0].style.backgroundColor;
 	 	rectangle.style.backgroundColor = shapes[0].style.backgroundColor;
 	 	numbers.style.color = shapes[0].style.backgroundColor;
+	 	$("body").css("background-image","url('http://33.media.tumblr.com/3e4ccc13280095f28acf4ef91cda36fa/tumblr_n7l8pdSEtp1slt6qeo2_500.gif')");
+
 	}
 };
 
@@ -210,8 +218,7 @@ function par2() {
 	 	rectangle.style.backgroundColor = shapes[4].style.backgroundColor;
 		$("#square").removeClass("face");
 		$("#square").addClass("square");
-
-
+		
 		$("#egg").removeClass("face");
 		$("#egg").addClass("egg");
 
@@ -232,6 +239,8 @@ function par2() {
 	 	circle.style.backgroundColor = shapes[4].style.backgroundColor;
 	 	square.style.backgroundColor = shapes[4].style.backgroundColor;
 	 	rectangle.style.backgroundColor = shapes[4].style.backgroundColor;
+	 	$("body").css("background-image","url('http://33.media.tumblr.com/3e4ccc13280095f28acf4ef91cda36fa/tumblr_n7l8pdSEtp1slt6qeo2_500.gif')");
+
 	}
 };
 
@@ -249,6 +258,8 @@ function rectangle2() {
 	 	par.style.backgroundColor = shapes[3].style.backgroundColor;
 	 	square.style.backgroundColor = shapes[3].style.backgroundColor;
 	 	numbers.style.color = shapes[3].style.backgroundColor;
+	 	$("body").css("background-image","url('http://33.media.tumblr.com/3e4ccc13280095f28acf4ef91cda36fa/tumblr_n7l8pdSEtp1slt6qeo2_500.gif')");
+
 		$("#square").removeClass("face");
 		$("#square").addClass("square");
 
@@ -282,6 +293,8 @@ function egg2() {
 	 	par.style.backgroundColor = shapes[5].style.backgroundColor;
 	 	rectangle.style.backgroundColor = shapes[5].style.backgroundColor;
 	 	numbers.style.color = shapes[5].style.backgroundColor;
+	 	$("body").css("background-image","url('http://33.media.tumblr.com/3e4ccc13280095f28acf4ef91cda36fa/tumblr_n7l8pdSEtp1slt6qeo2_500.gif')");
+
 	 	$("#square").removeClass("face");
 		$("#square").addClass("square");
 
@@ -335,6 +348,8 @@ function oval2() {
 	 	rectangle.style.backgroundColor = shapes[2].style.backgroundColor;
 	 	oval.style.backgroundColor = shapes[2].style.backgroundColor;
 	 	numbers.style.color = shapes[2].style.backgroundColor;
+	 	$("body").css("background-image","url('http://33.media.tumblr.com/3e4ccc13280095f28acf4ef91cda36fa/tumblr_n7l8pdSEtp1slt6qeo2_500.gif')");
+
 	}
 };
 function square2() {
@@ -367,6 +382,8 @@ function square2() {
 	 	par.style.backgroundColor = shapes[1].style.backgroundColor;
 	 	rectangle.style.backgroundColor = shapes[1].style.backgroundColor;
 	 	numbers.style.color = shapes[1].style.backgroundColor;
+	 	$("body").css("background-image","url('http://33.media.tumblr.com/3e4ccc13280095f28acf4ef91cda36fa/tumblr_n7l8pdSEtp1slt6qeo2_500.gif')");
+
 	}
 };
 
@@ -392,6 +409,8 @@ novice.addEventListener("click", function() {
 
 	$("#par").removeClass("face");
 	$("#par").removeClass("par");
+	$("body").css("background-image","url('http://www.backgroundsy.com/file/large/light-colorful-background.jpg')");
+
 
 	oval.removeEventListener("click", oval2);
 	square.removeEventListener("click", square2);
@@ -440,6 +459,7 @@ difficult.addEventListener("click",function() {
 	circle.addEventListener("click", circle2);
 	rectangle.addEventListener("click", rectangle2);
 	par.addEventListener("click", par2);
+	$("body").css("background-image","url('http://www.backgroundsy.com/file/large/light-colorful-background.jpg')");
 
 	$("#square").removeClass("face");
 	$("#square").addClass("square");
