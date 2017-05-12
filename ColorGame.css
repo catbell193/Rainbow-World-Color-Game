@@ -1,6 +1,7 @@
+/*header styling*/
 
 header {
-	background-image: url("https://cdn.pixabay.com/photo/2015/05/26/09/31/background-784377_960_720.jpg");
+	background-image: url("https://s-media-cache-ak0.pinimg.com/736x/fe/4a/1b/fe4a1b66f3236c065c959d0fbbbf8516.jpg");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	border-width: 6px;
@@ -15,6 +16,8 @@ header {
 
 }
 
+/*aligning of the font and shadowing for h1*/
+
 h1 { 
 	text-align: center;
 	font-family: 'Tangerine', serif;
@@ -22,6 +25,8 @@ h1 {
 	text-shadow: 3px 3px 3px #aaa;
 	margin-top: 0px;
 }
+
+/*body background styling*/
 
 body{
 	background-image: url("http://www.backgroundsy.com/file/large/light-colorful-background.jpg");
@@ -35,6 +40,7 @@ body{
 	width: 100%;
 
 }
+/*Styling of the spans to create rainbow letters*/
 
 #r {
 	color: #cc0000 ;
@@ -58,6 +64,8 @@ body{
 	color: #0000ff;
 }
 
+/*The styling  for the image  when the wrong shapen is clicked*/
+
 .face{ 
 	margin-left: 60px;
 	min-width: 100%
@@ -69,9 +77,10 @@ body{
 	background-size: 100% 100%;
 }
 
+/*backgroud styling for menu bar*/
 
 .menu {
-	background-image: url("http://cdn.wallpapersafari.com/90/87/hTxJ0c.jpg");
+	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXmlYCt5WMVv9yVhsxuFLgFGPAbXTN_qSky_ry9z_uqkdINZFNSA");
 	background-size: 100%
 	background-repeat: no-repeat;
 	background-color: white;
@@ -83,15 +92,8 @@ body{
 
 }
 
-.squares{
-	width: 30%;
-	padding-bottom: 30%;
-	float: left;
-	margin: 1.66%;
-	transition: background 0.5s;
-	-webkit-transition: background 0.5s;
-	-moz-transition: background 0.5s;
-}
+
+/*Styling for buttons including background image font styles and border routlining*/
 
 button {
 	background-image: url("https://68.media.tumblr.com/8c74dd3fdd2816b4308392af8a972881/tumblr_nyl5jrKtP21rzli00o1_500.jpg");
@@ -109,6 +111,8 @@ button {
 	-webkit-animation: zoom-in-out 2s linear 0s infinite normal ;
  animation: zoom-in-out 2s linear 0s infinite normal ;
 }
+
+/*Zooming out and in button animation*/
 
 @-webkit-keyframes zoom-in-out {
   0%{
@@ -140,10 +144,13 @@ button {
   }
 }
 
+/*Easy button positioning*/
 
 #easy {
 	margin-left: 20px;
 }
+
+/*creation of circle shape in empty div*/
 .circle {
 	max-width:100%;
 	width: 200px;
@@ -160,6 +167,8 @@ button {
 
 }
 
+/*circle spin animation*/
+
 @keyframes spin {
 	from {
 		transform: rotateY(0deg) rotate(0deg);
@@ -170,6 +179,8 @@ button {
 
 }
 
+/*Creation of square in empty div*/
+
 .square {
 	width: 200px;
 	height: 200px;
@@ -178,6 +189,8 @@ button {
 	
 
 }
+
+/*square rotation animation*/
 
 .square:hover {
 	animation: spin 3s infinite linear;
@@ -193,6 +206,8 @@ button {
 	}
 }
 
+/*Creation of oval in empty div*/
+
 .oval {
 	width: 300px;
 	height: 150px;
@@ -204,7 +219,7 @@ button {
 } 
 
 	
-
+/*oval rotation animation*/
 
 .oval:hover {
 	animation: spin 3s infinite linear;
@@ -221,6 +236,7 @@ button {
 
 }
 
+/*Creation of the parallelogram in empty div*/
 .par {
 	margin-left: 60px;
 	width: 250px;
@@ -231,6 +247,9 @@ button {
 	background: white;
 
 }
+
+/*Parallelogram rotation animation*/
+
 .par:hover {
 	animation: spin 3s infinite linear;
 
@@ -246,6 +265,8 @@ button {
 
 }
 
+/*Creation of rectangle in empty div*/
+
 .rectangle {
 	width:320px;
 	height: 200px;
@@ -254,6 +275,9 @@ button {
 	margin-left: 30px;
 	
 }
+
+/*rectangle  rotation animation*/
+
 .rectangle:hover {
 	animation: spin 3s infinite linear;
 
@@ -268,6 +292,9 @@ button {
 	}	
 
 }
+
+/*Creation of egg shape in empty div*/
+
 .egg {
 	display:block;
    margin-left: 60px;
@@ -279,6 +306,7 @@ button {
    
 }
 	
+/*egg rotation animation*/
 
 .egg:hover {
 	animation: spin 3s infinite linear;
@@ -295,6 +323,7 @@ button {
 
 }
 
+/*positioning for the shapes alingment in the table*/
 
 .container1{
 	text-align: center;

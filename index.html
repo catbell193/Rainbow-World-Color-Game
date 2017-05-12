@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Colorful Fun</title>
+		<!-- Css and font stlying links -->
 		<link rel="stylesheet" type="text/css" href="ColorGame.css">
 		<meta name=" viewport" content="width=device-width,initial-scale=1">
 		<link rel="stylesheet" type="text/css"
@@ -11,24 +12,41 @@
 	</head>
 	<body>
 		<header>
+		<!-- Heading letters given in line span id for rainbow color effect styling in css -->
 			<h1><span id="r">R</span><span id="a">a</span><span id="i">i</span><span id="n">n</span><span id="b">b</span><span id="o">o</span><span id="w">w</span> World Game<br>
+		<!-- Span given for colors and empty span that will take one rgb numerical value -->
 			<span id="colors">Colors = </span><span id="numbers"></span></h1>
 
 		</header>
 		<div class="menu">
+			<!-- Start button -->
 			<button id="journey">Start your Journey</button>
+			
+			<!-- Easy button -->
 			<button id="easy">Novice</button>
+
+			<!-- Hard button -->
 			<button id="hard">Difficult</button>
 		<div>
 		<br>
-
+		<!-- Div container thats going to hold a table to hold the shapes -->
 		<div id="container">
 			<div class="container1">
 				<table id="t1">
 					<thead>
 						<tr>
+						<!-- Shapes for first row in the table with a table head containing  empty div for each shapes that will be created in CSS file -->
+						
+							<!-- Circle -->
+							
 							<th><div id="circle" class ="circle"></div></th>
+							
+							<!-- Square -->
+							
 							<th><div id="square" class ="square"></div></th>
+
+							<!-- Oval -->
+							
 							<th><div id="oval" class ="oval"></div></th>
 						</tr>
 					</thead>
@@ -41,14 +59,26 @@
 				<table id="t2">
 					<thead>
 						<tr>
+						<!-- Shapes for second row in the table with a table head containing empty div for each shapes that will be created in CSS file -->
+
+							<!-- Egg -->
+						
 							<th><div id="egg" class="egg"></div></th>
+
+							<!-- Rectangle -->
+
 							<th><div id="rectangle" class="rectangle"></div></th>
+
+							<!-- Paralellogram -->
+							
 							<th><div id="par" class="par"></div></th>
+
 						</tr>
 					</thead>
 				</table>
 			</div>
 		</div>
+		<!-- Javascript and jquery links -->
 		<script async type="text/javascript" src="ColorGame.js"></script>
 		<script
   				src="https://code.jquery.com/jquery-3.2.1.js"

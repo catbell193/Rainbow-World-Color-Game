@@ -1,8 +1,7 @@
-/* Declaring variables at the top to be used and 
+/* Declaring variables for shapes to add event listeners to
 functions later on*/
 
 var colors = document.getElementById("colors");
-/*colors.addEventListener("click",Rainbow );*/
 
 var square = document.getElementById("square");
 	
@@ -10,12 +9,13 @@ var oval = document.getElementById("oval");
 	
 var egg = document.getElementById("egg");
 	
-
 var rectangle = document.getElementById("rectangle");
-
 
 var par = document.getElementById("par");
 
+// Start button even listener to randomize shapes, rephresh wrong shapes
+// from unfisnished rounds as well as adding back shapes removed when the 
+//  easy button is clicked as well as reseting the background image
 
 var journey= document.getElementById("journey");
 journey.addEventListener("click", function() {
@@ -36,7 +36,6 @@ journey.addEventListener("click", function() {
 	$("#square").removeClass("face");
 	$("#square").addClass("square");
 
-
 	$("#egg").removeClass("face");
 	$("#egg").addClass("egg");
 
@@ -52,8 +51,6 @@ journey.addEventListener("click", function() {
 	$("#oval").removeClass("face");
 	$("#oval").addClass("oval");
 
-	
-	
 	for (var i = 0; i < shapes.length; i++) {
 		var red = Math.floor(256*Math.random());
 		var green = Math.floor(256*Math.random());
@@ -61,7 +58,6 @@ journey.addEventListener("click", function() {
 		var rgb ="rgb(" + red + "," + green + "," + blue +")";
 		shapes[i].style.backgroundColor = rgb;
 		
-	
 	}
 	numbers.style.color = "black";
 	
@@ -75,10 +71,9 @@ journey.addEventListener("click", function() {
 	
 	console.log(select);
 
-	
 });
 
-
+// Grabbing more elements and id's for use
 
 var circle = document.getElementById("circle");
 
@@ -101,8 +96,13 @@ var tr =  document.getElementsByTagName("tr");
 
 var novice = document.getElementById("easy");
 
+// Note all the functions change the background image when
+// the shape is anything but not equal to the numerical rgb 
+// value displayed
+
+// function to be used in the circle click event listener in easy mode
+
 function circle1() {
-	
 	
 	if(numbers.innerHTML != shapes1[2].style.backgroundColor){
 		$("#circle").removeClass("circle");
@@ -123,7 +123,9 @@ function circle1() {
 
 	}
 }
-	
+
+// function to be used in the oval click event listener in easy mode
+
 function oval1(){
 	if(numbers.innerHTML != shapes1[1].style.backgroundColor){
 		$("#oval").removeClass("oval");
@@ -144,6 +146,9 @@ function oval1(){
 
 	}
 }
+
+// function to be used in the square click event listener in easy mode
+
 function square1() {
 	
 	if(numbers.innerHTML != shapes1[0].style.backgroundColor){
@@ -163,12 +168,11 @@ function square1() {
 	 	numbers.style.color = shapes1[0].style.backgroundColor;
 	 	$("body").css("background-image","url('http://33.media.tumblr.com/3e4ccc13280095f28acf4ef91cda36fa/tumblr_n7l8pdSEtp1slt6qeo2_500.gif')");
 
-
 	}
 }
+
+// function for circle event listener in starting mode and hard mode
 	
-
-
 function circle2() {
  	if(numbers.innerHTML != shapes[0].style.backgroundColor){
 		$("#circle").removeClass("circle");
@@ -203,6 +207,8 @@ function circle2() {
 
 	}
 };
+
+// function for paralellogram event listener in starting mode and hard mode
 
 function par2() {
 	if(numbers.innerHTML != shapes[4].style.backgroundColor){
@@ -244,6 +250,7 @@ function par2() {
 	}
 };
 
+// function for rectangle event listener in starting mode and hard mode
 
 function rectangle2() {
 
@@ -280,6 +287,9 @@ function rectangle2() {
 		$("#oval").addClass("oval")
 	 }
 };
+
+// function for egg event listener in starting mode and hard mode
+
 function egg2() {
 	if(numbers.innerHTML != shapes[5].style.backgroundColor){
 	 	$("#egg").removeClass("egg");
@@ -315,6 +325,8 @@ function egg2() {
 		$("#oval").addClass("oval")
 	}
 };
+
+// function for oval event listener in starting mode and hard mode
 
 function oval2() {
 	if(numbers.innerHTML != shapes[2].style.backgroundColor){
@@ -352,6 +364,9 @@ function oval2() {
 
 	}
 };
+
+// function for square event listener in starting mode and hard mode
+
 function square2() {
 	if(numbers.innerHTML != shapes[1].style.backgroundColor){
 	 	$("#square").removeClass("square");
@@ -388,6 +403,10 @@ function square2() {
 };
 
 
+// Easy buttpm which removes the classes of the bottom 3 shapes and 
+// uses the functions for the 3 shapes with an easy mode function for
+// their event listener ie circle, square, and oval as well as setting
+// as well as reseting the background image
 
 novice.addEventListener("click", function() {
 	$("#square").removeClass("face");
@@ -449,6 +468,9 @@ novice.addEventListener("click", function() {
 
 	
 });
+
+// Hard mode event listener which does the same thing as the start menu excpet with 
+// some text content changes
 	
 var difficult = document.getElementById("hard");
 difficult.addEventListener("click",function() {
@@ -507,9 +529,19 @@ difficult.addEventListener("click",function() {
 	
 });
 
+// Array of shapes used to go through to add randomized rgb value for 
+// start and difficulty mode
+
 var shapes = [circle,square,oval,rectangle,par,egg];
 
+// Array of shapes used to go through to add randomized rgb value for 
+// easy mode
+
+
 var shapes1 =[square,oval,circle];
+
+// Color randomizer using the math.random() method and math.floor method 
+// to get the numerical value to assign rgb values for the background color
 
 var red = Math.floor(256*Math.random());
 
